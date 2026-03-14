@@ -1,2 +1,6 @@
 mod scanner;
-fn main() {}
+use scanner::scan_repo as bingo;
+
+fn main() {
+    bingo();
+}
