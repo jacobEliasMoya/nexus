@@ -1,6 +1,9 @@
 mod scanner;
-use scanner::scan_repo as bingo;
+use scanner::{infer_directory, scan_repo};
+use std::path::Path;
 
 fn main() {
-    bingo();
+    let current_path = Path::new("./");
+    scan_repo();
+    infer_directory(current_path);
 }
