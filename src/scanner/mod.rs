@@ -8,6 +8,13 @@ pub fn scan_repo() {
 pub fn infer_directory(path: &Path) {
     let entries = read_dir(path).unwrap();
     for entry in entries {
-        println!("{entry:?}");
+        match entry {
+            Ok(entry) => {
+                println!("{}", entry.path().display());
+            }
+            Err(err) => {
+                println!("Error reading entry: {:?}", err);
+            }
+        }
     }
 }
