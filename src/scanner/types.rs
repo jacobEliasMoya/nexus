@@ -1,11 +1,11 @@
-use std::path::PathBuf;
+use std::path::pathbuf;
 
-#[derive(Debug)]
+#[derive(debug)]
 pub struct FileEntry {
-    pub path: PathBuf,
+    pub path: pathbuf,
 }
 
-#[derive(Debug)]
+#[derive(debug)]
 pub struct ScannerData {
-    pub files: Vec<FileEntry>,
+    pub files: vec<FileEntry>,
 }
